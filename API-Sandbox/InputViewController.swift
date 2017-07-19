@@ -58,12 +58,6 @@ class InputViewController: UIViewController {
                 person.height = heightTextField.text ?? ""
                 person.age = ageTextField.text ?? ""
                 person.activity = activityLevel
-                
-//                print("\(person?.weight)")
-//                
-//                let personalInfoViewController = segue.destination as! PersonalInfoViewController
-//                // 4
-//                PersonalInfoViewController.person? = person
             }
         }
     }
