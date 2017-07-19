@@ -17,9 +17,9 @@ class PersonalInfoViewController: UIViewController {
     
     var BMI = 0.0
     var RMR = 0.0
-    var weight = 0.0
-    var height = 0.0
-    var age = 0.0
+//    var weight = 0.0
+//    var height = 0.0
+//    var age = 0.0
     var estimatedCalories = 0
         
 
@@ -46,21 +46,36 @@ class PersonalInfoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //BMI calculation
-        weight = Double(person.weight)!
-        height = Double(person.height)!
-        age = Double(person.age)!
-        BMI = weight/(height * height)
-        bmiLabel.text = String(format: "%.2f", BMI)
-        
-        //RMR calculation
-        if person.sex == "Male" {
-            RMR = 88.4 + (13.4 * weight)
-            RMR = RMR + 4.8 * (height/100)
-            RMR = RMR - 5.68 * age
+        if let weight = Double(person.weight) {
+            if let height =  Double(person.height) {
+                BMI = weight/(height * height)
+                bmiLabel.text = String(format: "%.2f", BMI)
+                
+                if let age = Double(person.age) {
+                    if person.sex == "Male" {
+                        RMR = 88.4 + (13.4 * weight)
+                        RMR = RMR + 4.8 * (height/100)
+                        RMR = RMR - 5.68 * age
+                    }
+                    if person.sex == "Female" {
+                        RMR = 447.6 + 9.25 * weight
+                        RMR = RMR + 3.1 * (height/100)
+                        RMR = RMR - 4.33 * age
+                    }
+                    rmrLabel.text = String(format: "%.2f", RMR)
+                }
+                
+            } else {
+                bmiLabel.text = "Information was inputted incorrectly."
+                rmrLabel.text = "Information was inputted incorrectly."
+            }
+        } else {
+            bmiLabel.text = "Information was inputted incorrectly."
+            rmrLabel.text = "Information was inputted incorrectly."
         }
-        rmrLabel.text = String(format: "%.2f", RMR)
     }
+    
+        
     
     
 

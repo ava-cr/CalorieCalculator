@@ -53,6 +53,7 @@ class InputViewController: UIViewController {
                 default:
                     break
                 }
+                
                 person.sex = sex
                 person.weight = weightTextField.text ?? ""
                 person.height = heightTextField.text ?? ""
