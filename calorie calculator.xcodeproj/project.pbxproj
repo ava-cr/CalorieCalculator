@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21B4F79288F5023418E51F9C /* Pods_API_Sandbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA943B06F3E27CF903CAD43F /* Pods_API_Sandbox.framework */; };
+		371BBD881F20F8E3003E0E1B /* activitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371BBD871F20F8E3003E0E1B /* activitiesViewController.swift */; };
 		37211CA41F1EA62500875D82 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37211CA31F1EA62500875D82 /* InputViewController.swift */; };
 		37211CA71F1FA93400875D82 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37211CA61F1FA93400875D82 /* PersonalInfoViewController.swift */; };
 		37211CAA1F1FCA6500875D82 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37211CA91F1FCA6500875D82 /* Person.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		371BBD871F20F8E3003E0E1B /* activitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = activitiesViewController.swift; sourceTree = "<group>"; };
 		37211CA31F1EA62500875D82 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		37211CA61F1FA93400875D82 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		37211CA91F1FCA6500875D82 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				BC7C84551D1D488300BA19ED /* ViewController.swift */,
 				37211CA31F1EA62500875D82 /* InputViewController.swift */,
 				37211CA61F1FA93400875D82 /* PersonalInfoViewController.swift */,
+				371BBD871F20F8E3003E0E1B /* activitiesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				37211CAA1F1FCA6500875D82 /* Person.swift in Sources */,
 				BC7C84561D1D488300BA19ED /* ViewController.swift in Sources */,
 				BC7C84541D1D488300BA19ED /* AppDelegate.swift in Sources */,
+				371BBD881F20F8E3003E0E1B /* activitiesViewController.swift in Sources */,
 				37211CA71F1FA93400875D82 /* PersonalInfoViewController.swift in Sources */,
 				37211CA41F1EA62500875D82 /* InputViewController.swift in Sources */,
 			);
