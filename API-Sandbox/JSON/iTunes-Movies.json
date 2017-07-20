@@ -8,12 +8,12 @@
         "label": "http://www.apple.com/itunes/"
       }
     },
-    "entry": [
+    "categories": [
       {
-        "im:name": {
-          "label": "Zootopia"
+        "im:category": {
+          "label": "Bicycling"
         },
-        "rights": {
+        "actvities": {
           "label": "© 2016 Disney Enterprises, Inc. All Rights Reserved"
         },
         "im:image": [

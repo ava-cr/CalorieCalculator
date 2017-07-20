@@ -14,4 +14,5 @@ class Person {
     var height = ""
     var age = ""
     var activity = ""
+    var activityList = [String]()
 }
