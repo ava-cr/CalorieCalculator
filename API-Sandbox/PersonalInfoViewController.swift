@@ -20,7 +20,9 @@ class PersonalInfoViewController: UIViewController {
 //    var weight = 0.0
 //    var height = 0.0
 //    var age = 0.0
-    var estimatedCalories = 0
+    var estimatedCalories = 0.0
+    var weightLossCalories = 0.0
+    var weightGainCalories = 0.0
         
 
     override func viewDidLoad() {
@@ -48,9 +50,14 @@ class PersonalInfoViewController: UIViewController {
         
         if let weight = Double(person.weight) {
             if let height =  Double(person.height) {
+                bmiLabel.textColor = UIColor.white
+
+                
+                //BMI calculation
                 BMI = weight/(height * height)
                 bmiLabel.text = String(format: "%.2f", BMI)
                 
+                //RMR calculation
                 if let age = Double(person.age) {
                     if person.sex == "Male" {
                         RMR = 88.4 + (13.4 * weight)
@@ -62,16 +69,32 @@ class PersonalInfoViewController: UIViewController {
                         RMR = RMR + 3.1 * (height/100)
                         RMR = RMR - 4.33 * age
                     }
-                    rmrLabel.text = String(format: "%.2f", RMR)
+                    rmrLabel.text = String(format: "%.1f", RMR)
+                }
+                
+                //Estimated Calories calculation
+                for i in 1...5 {
+                    if person.activity == String(i) {
+                        estimatedCalories = RMR * (1.2 + Double(i) * 0.15)
+                        weightLossCalories = estimatedCalories - estimatedCalories * 0.2
+                        weightGainCalories = estimatedCalories + estimatedCalories * 0.2
+                        estimatedCaloriesLabel.text = "Maintenance: " + String(format: "%.1f", estimatedCalories)
+                        estimatedCaloriesLabel.text?.append(" Weight Gain: " + String(format: "%.1f", weightGainCalories))
+                        estimatedCaloriesLabel.text?.append(" Weight Loss: " + String(format: "%.1f", weightLossCalories))
+                    }
                 }
                 
             } else {
-                bmiLabel.text = "Information was inputted incorrectly."
-                rmrLabel.text = "Information was inputted incorrectly."
+                bmiLabel.textColor = UIColor.red
+                bmiLabel.text = "Information was inputted incorrectly. Press \"Back\" and try again."
+                rmrLabel.text = ""
+                estimatedCaloriesLabel.text = ""
             }
         } else {
-            bmiLabel.text = "Information was inputted incorrectly."
-            rmrLabel.text = "Information was inputted incorrectly."
+            bmiLabel.textColor = UIColor.red
+            bmiLabel.text = "Information was inputted incorrectly. Press \"Back\" and try again."
+            rmrLabel.text = ""
+            estimatedCaloriesLabel.text = ""
         }
     }
     

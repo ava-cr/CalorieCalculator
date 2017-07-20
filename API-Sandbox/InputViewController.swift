@@ -50,6 +50,8 @@ class InputViewController: UIViewController {
                     activityLevel = "3"
                 case 3:
                     activityLevel = "4"
+                case 4:
+                    activityLevel = "5"
                 default:
                     break
                 }

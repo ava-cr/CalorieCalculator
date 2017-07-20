@@ -190,6 +190,7 @@
                                                     <segment title="2"/>
                                                     <segment title="3"/>
                                                     <segment title="4"/>
+                                                    <segment title="5"/>
                                                 </segments>
                                                 <color key="tintColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
                                             </segmentedControl>
@@ -207,14 +208,27 @@
                                     <constraint firstItem="5Fr-9h-rfx" firstAttribute="centerX" secondItem="lOt-Ip-gge" secondAttribute="centerX" id="xu2-FA-8YS"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjM-dn-BBT">
+                                <rect key="frame" x="67.5" y="547.5" width="240.5" height="94.5"/>
+                                <string key="text">0 - sedentary (little or no exercise)
+1 - light exercise (1-3x a week)
+2 - moderate exercise (3-5x a week)
+3 - hard exercise (6-7x a week)
+4 - very hard exercise (2x a day)</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yoc-yF-1H7" firstAttribute="centerX" secondItem="r72-G3-yfk" secondAttribute="centerX" id="7qa-0E-KwV"/>
                             <constraint firstItem="lOt-Ip-gge" firstAttribute="leading" secondItem="r72-G3-yfk" secondAttribute="leadingMargin" constant="10" id="D2N-gC-sfk"/>
+                            <constraint firstItem="OjM-dn-BBT" firstAttribute="centerX" secondItem="r72-G3-yfk" secondAttribute="centerX" id="GtQ-lR-OhY"/>
                             <constraint firstItem="bzZ-et-RSN" firstAttribute="leading" secondItem="r72-G3-yfk" secondAttribute="leadingMargin" id="HJC-z9-bZv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lOt-Ip-gge" secondAttribute="trailing" constant="10" id="R1v-xH-lRZ"/>
                             <constraint firstItem="bzZ-et-RSN" firstAttribute="top" secondItem="aPb-gS-obG" secondAttribute="bottom" constant="10" id="c2R-dZ-evO"/>
+                            <constraint firstItem="85a-Mo-sIO" firstAttribute="top" secondItem="OjM-dn-BBT" secondAttribute="bottom" constant="25" id="rXO-6y-jjT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bzZ-et-RSN" secondAttribute="trailing" id="s9O-dm-ryf"/>
                             <constraint firstItem="yoc-yF-1H7" firstAttribute="top" secondItem="bzZ-et-RSN" secondAttribute="bottom" constant="10" id="tK1-em-BuA"/>
                             <constraint firstItem="lOt-Ip-gge" firstAttribute="top" secondItem="yoc-yF-1H7" secondAttribute="bottom" constant="30" id="tyb-iW-QHd"/>
@@ -239,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dR-nM-dfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3282" y="1062"/>
+            <point key="canvasLocation" x="3280.8000000000002" y="1061.9190404797603"/>
         </scene>
         <!--Activities-->
         <scene sceneID="Ton-Ke-bg6">
@@ -318,7 +332,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User's Estimated Calories" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCq-xm-qVx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User's Estimated Calories" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCq-xm-qVx">
                                                 <rect key="frame" x="177.5" y="0.0" width="177.5" height="45"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
