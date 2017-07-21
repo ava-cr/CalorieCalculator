@@ -90,6 +90,7 @@ class activitiesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         // The parameter named row and component represents what was selected.
         if pickerView.tag == 1 {
             activityData = activity.activities[row]
+            activityPicker.selectRow(0, inComponent: 0, animated: true)
         }
         else {
             print("activity chosen!")
