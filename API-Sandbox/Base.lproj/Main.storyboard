@@ -326,52 +326,60 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration (mins): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4l-P4-HV5">
-                                <rect key="frame" x="16" y="407" width="139" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories Burned:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qc-Zd-ygc">
-                                <rect key="frame" x="16" y="518" width="139" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQL-yV-5NB">
-                                <rect key="frame" x="126" y="459" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="CALCULATE!">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hUu-je-dc5">
-                                <rect key="frame" x="157" y="168" width="202" height="94"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="s1T-TC-pIh">
+                                <rect key="frame" x="61" y="389" width="254" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration (mins): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4l-P4-HV5">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J5L-dz-v9S">
+                                        <rect key="frame" x="139.5" y="0.0" width="114.5" height="30"/>
+                                        <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="J5L-dz-v9S" firstAttribute="width" secondItem="M4l-P4-HV5" secondAttribute="width" id="Myk-3B-7yn"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0jm-DD-Ob5">
+                                <rect key="frame" x="20" y="529.5" width="335" height="26"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Burned:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qc-Zd-ygc">
+                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Burned" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-FW-xIi">
+                                        <rect key="frame" x="182.5" y="0.0" width="152.5" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="w9z-FW-xIi" firstAttribute="width" secondItem="2Qc-Zd-ygc" secondAttribute="width" id="F3s-c8-yHP"/>
+                                </constraints>
+                            </stackView>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUu-je-dc5">
+                                <rect key="frame" x="21" y="159.5" width="333" height="100"/>
                                 <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="io5-Th-EkY"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="rQb-vT-0fc" id="ihU-8Q-hO5"/>
                                     <outlet property="delegate" destination="rQb-vT-0fc" id="Iw6-jC-Plz"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories Burned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-FW-xIi">
-                                <rect key="frame" x="185" y="518" width="133" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4C-cF-6Kc">
-                                <rect key="frame" x="276" y="407" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9r-gL-igf">
                                 <rect key="frame" x="5" y="565.5" width="365" height="47.5"/>
                                 <string key="text">Ainsworth BE, Haskell WL, Herrmann SD, Meckes N, Bassett Jr DR, Tudor-Locke C, Greer JL, Vezina J, Whitt-Glover MC, Leon AS. The Compendium of Physical Activities Tracking Guide. Healthy Lifestyles Research Center, College of Nursing &amp; Health Innovation, Arizona State University. Retrieved [date] from the World Wide Web.
@@ -380,45 +388,53 @@ https://sites.google.com/site/compendiumofphysicalactivities/</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="glg-tx-f0R">
-                                <rect key="frame" x="157" y="267" width="202" height="132"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-g2-RBm">
+                                <rect key="frame" x="158.5" y="259.5" width="58" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Category: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdt-vn-JQW">
+                                <rect key="frame" x="124" y="139" width="127" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glg-tx-f0R">
+                                <rect key="frame" x="21" y="280" width="333" height="100"/>
                                 <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Cj7-uj-Clk"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="rQb-vT-0fc" id="77J-4N-sTu"/>
                                     <outlet property="delegate" destination="rQb-vT-0fc" id="DZA-R5-88u"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-g2-RBm">
-                                <rect key="frame" x="10" y="323" width="139" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="WWQ-IY-jXr">
-                                <rect key="frame" x="157" y="403" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity Category: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdt-vn-JQW">
-                                <rect key="frame" x="16" y="205" width="139" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="W7P-g2-RBm" firstAttribute="top" secondItem="hUu-je-dc5" secondAttribute="bottom" id="6eL-Qh-2ZA"/>
+                            <constraint firstItem="Hdt-vn-JQW" firstAttribute="centerX" secondItem="oFr-GK-BtT" secondAttribute="centerX" id="9wr-o2-e4q"/>
                             <constraint firstItem="9ON-Dj-WPb" firstAttribute="top" secondItem="l9r-gL-igf" secondAttribute="bottom" constant="5" id="AbG-aL-4rR"/>
+                            <constraint firstItem="s1T-TC-pIh" firstAttribute="centerX" secondItem="oFr-GK-BtT" secondAttribute="centerX" id="DVa-xH-yz8"/>
                             <constraint firstAttribute="trailing" secondItem="l9r-gL-igf" secondAttribute="trailing" constant="5" id="GdE-l7-5nG"/>
                             <constraint firstAttribute="trailing" secondItem="tiC-bJ-SqE" secondAttribute="trailing" constant="10" id="I6h-p7-Oy5"/>
+                            <constraint firstItem="0jm-DD-Ob5" firstAttribute="centerX" secondItem="oFr-GK-BtT" secondAttribute="centerX" id="J5z-HV-0DR"/>
                             <constraint firstItem="tiC-bJ-SqE" firstAttribute="leading" secondItem="oFr-GK-BtT" secondAttribute="leading" constant="10" id="Ml3-Fs-2Ai"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hUu-je-dc5" secondAttribute="trailing" constant="5" id="PGf-Nt-PPE"/>
+                            <constraint firstItem="l9r-gL-igf" firstAttribute="top" secondItem="0jm-DD-Ob5" secondAttribute="bottom" constant="10" id="S38-xr-dCC"/>
+                            <constraint firstItem="glg-tx-f0R" firstAttribute="top" secondItem="W7P-g2-RBm" secondAttribute="bottom" id="Ug1-cr-YyI"/>
                             <constraint firstItem="l9r-gL-igf" firstAttribute="leading" secondItem="oFr-GK-BtT" secondAttribute="leading" constant="5" id="Z30-rZ-3pu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="glg-tx-f0R" secondAttribute="trailing" constant="5" id="fAB-BI-Rca"/>
+                            <constraint firstItem="W7P-g2-RBm" firstAttribute="centerX" secondItem="oFr-GK-BtT" secondAttribute="centerX" id="ne1-KM-Hn0"/>
+                            <constraint firstItem="s1T-TC-pIh" firstAttribute="top" secondItem="glg-tx-f0R" secondAttribute="bottom" constant="9" id="oiw-6t-91s"/>
+                            <constraint firstItem="hUu-je-dc5" firstAttribute="top" secondItem="Hdt-vn-JQW" secondAttribute="bottom" id="qQ2-zL-xKL"/>
                             <constraint firstItem="tiC-bJ-SqE" firstAttribute="top" secondItem="rHc-iX-8al" secondAttribute="bottom" constant="10" id="rLf-NA-r5g"/>
+                            <constraint firstItem="glg-tx-f0R" firstAttribute="leading" secondItem="oFr-GK-BtT" secondAttribute="leadingMargin" constant="5" id="sdY-NJ-vwF"/>
+                            <constraint firstItem="hUu-je-dc5" firstAttribute="leading" secondItem="oFr-GK-BtT" secondAttribute="leadingMargin" constant="5" id="wJ3-Ss-eI2"/>
+                            <constraint firstItem="Hdt-vn-JQW" firstAttribute="top" secondItem="tiC-bJ-SqE" secondAttribute="bottom" constant="8" id="wR0-51-1SH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Activities" image="black_running_figure" selectedImage="black_running_figure" id="Ccf-Qx-Wmo">
@@ -431,6 +447,8 @@ https://sites.google.com/site/compendiumofphysicalactivities/</string>
                     <connections>
                         <outlet property="activityCategoryPicker" destination="hUu-je-dc5" id="N8u-MI-PfU"/>
                         <outlet property="activityPicker" destination="glg-tx-f0R" id="NXM-ja-Yl7"/>
+                        <outlet property="caloriesBurnedLabel" destination="w9z-FW-xIi" id="9QN-ay-SjC"/>
+                        <outlet property="durationTextField" destination="J5L-dz-v9S" id="qfK-dF-iSR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDp-GV-dbV" userLabel="First Responder" sceneMemberID="firstResponder"/>

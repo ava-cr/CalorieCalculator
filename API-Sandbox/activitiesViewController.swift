@@ -14,6 +14,8 @@ class activitiesViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     //activity category picker
     @IBOutlet weak var activityCategoryPicker: UIPickerView!
+    @IBOutlet weak var durationTextField: UITextField!
+    @IBOutlet weak var caloriesBurnedLabel: UILabel!
     
     
     var activityCategoryData: [String] = [String]()
@@ -31,7 +33,8 @@ class activitiesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         activityPicker.dataSource = self
         activityData = activity.activities[0]
         activityCategoryData = activity.categories
- 
+        
+        durationTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,10 +77,11 @@ class activitiesViewController: UIViewController, UIPickerViewDelegate, UIPicker
             
             if pickerView.tag == 1 {
                 label?.text = activityCategoryData[row]
+                label?.font = UIFont(name:"Helvetica Neue - Thin", size:15)
             } else {
                 label?.text = activityData[row]
+                label?.font = UIFont(name:"Helvetica Neue - Thin", size:14)
             }
-            label?.font = UIFont(name:"Helvetica Neue - Thin", size:15)
             label?.textAlignment = .center
             return label!
         default:
@@ -90,13 +94,28 @@ class activitiesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         // The parameter named row and component represents what was selected.
         if pickerView.tag == 1 {
             activityData = activity.activities[row]
+            activityPicker.reloadAllComponents();
             activityPicker.selectRow(0, inComponent: 0, animated: true)
         }
         else {
             print("activity chosen!")
         }
     }
+    
+    // duration + calculation:
+    
+  
+
 }
+extension activitiesViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        durationTextField.resignFirstResponder()
+        activity.duration = durationTextField.text ?? ""
+        print("activity.duration " + "\(activity.duration)")
+        caloriesBurnedLabel.text = "999"
+        return true
+    }}
+
 
 
 
