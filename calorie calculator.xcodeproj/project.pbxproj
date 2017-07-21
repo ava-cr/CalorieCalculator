@@ -12,6 +12,7 @@
 		37211CA41F1EA62500875D82 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37211CA31F1EA62500875D82 /* InputViewController.swift */; };
 		37211CA71F1FA93400875D82 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37211CA61F1FA93400875D82 /* PersonalInfoViewController.swift */; };
 		37211CAA1F1FCA6500875D82 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37211CA91F1FCA6500875D82 /* Person.swift */; };
+		37D52A341F2257770045E819 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D52A331F2257770045E819 /* Activity.swift */; };
 		BC7C84541D1D488300BA19ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7C84531D1D488300BA19ED /* AppDelegate.swift */; };
 		BC7C84561D1D488300BA19ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7C84551D1D488300BA19ED /* ViewController.swift */; };
 		BC7C84591D1D488300BA19ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7C84571D1D488300BA19ED /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		37211CA31F1EA62500875D82 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		37211CA61F1FA93400875D82 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		37211CA91F1FCA6500875D82 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		37D52A331F2257770045E819 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		84BDCA056171BA12363B537F /* Pods-API-Sandbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-API-Sandbox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-API-Sandbox/Pods-API-Sandbox.debug.xcconfig"; sourceTree = "<group>"; };
 		AA943B06F3E27CF903CAD43F /* Pods_API_Sandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_API_Sandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7C84501D1D488300BA19ED /* calorie calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "calorie calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				37211CA91F1FCA6500875D82 /* Person.swift */,
+				37D52A331F2257770045E819 /* Activity.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				37211CAA1F1FCA6500875D82 /* Person.swift in Sources */,
 				BC7C84561D1D488300BA19ED /* ViewController.swift in Sources */,
+				37D52A341F2257770045E819 /* Activity.swift in Sources */,
 				BC7C84541D1D488300BA19ED /* AppDelegate.swift in Sources */,
 				371BBD881F20F8E3003E0E1B /* activitiesViewController.swift in Sources */,
 				37211CA71F1FA93400875D82 /* PersonalInfoViewController.swift in Sources */,

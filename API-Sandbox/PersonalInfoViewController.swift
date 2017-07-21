@@ -17,9 +17,6 @@ class PersonalInfoViewController: UIViewController {
     
     var BMI = 0.0
     var RMR = 0.0
-//    var weight = 0.0
-//    var height = 0.0
-//    var age = 0.0
     var estimatedCalories = 0.0
     var weightLossCalories = 0.0
     var weightGainCalories = 0.0
@@ -83,7 +80,6 @@ class PersonalInfoViewController: UIViewController {
                         estimatedCaloriesLabel.text?.append(" Weight Loss: " + String(format: "%.1f", weightLossCalories))
                     }
                 }
-                
             } else {
                 bmiLabel.textColor = UIColor.red
                 bmiLabel.text = "Information was inputted incorrectly. Press \"Back\" and try again."
@@ -97,19 +93,4 @@ class PersonalInfoViewController: UIViewController {
             estimatedCaloriesLabel.text = ""
         }
     }
-    
-        
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
